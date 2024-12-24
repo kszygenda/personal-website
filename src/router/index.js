@@ -29,8 +29,6 @@ const routes = [
     path: '/Experience',
     component: () => import('@/components/ExperienceComponent.vue')
   },
-
-  // {path: '/Experience', component: ExperienceView}
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

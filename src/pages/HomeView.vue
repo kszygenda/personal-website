@@ -26,14 +26,20 @@
         temporary
       >
         <v-list
-          :items="drawerItems"
-        ></v-list>
+          :items="drawerItems">
+          <v-list-item
+          v-for="item in drawerItems"
+          :key="item.title"
+          @click="itemClicked(item)">
+            <v-list-item-title>
+              {{ item.title }}
+            </v-list-item-title>
+
+          </v-list-item>
+        </v-list>
       </v-navigation-drawer>
 
       <v-main style="height: 500px;">
-        <v-btn @click ="Debug">
-
-        </v-btn>
       </v-main>
     </v-layout>
   </v-card>
@@ -43,9 +49,17 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue';
 import axios from 'axios';
-
-// component state
+import { useRouter } from "vue-router";
+import { useI18n } from 'vue-i18n'
+// web navigation,state, multilanguage support
+const { t } = useI18n();
+//TODO get t("Router") as object.
+const router = useRouter();
+const translation = t('Router', { returnObjects: true });
+console.log(translation);
+// components elements
 const drawer = ref(false);
+
 const drawerItems = reactive([
   {title: "app_bar1", route: ""},
   {title: "app_bar2", route: ""}
@@ -56,13 +70,13 @@ const drawerItems = reactive([
 const fetchData = async () => {
   try {
     const response = await axios.get('url...');
-    console.log(response.data);
+    // console.log(response.data);
   } catch (error) {
     console.error('Error fetching data:', error);
   }
 };
-const Debug = () => {
-  console.log(this.$router.routes);
+function itemClicked(item) {
+  console.log(item);
 }
 
 // Lifecycle hook
