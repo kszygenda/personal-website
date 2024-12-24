@@ -31,9 +31,13 @@
       </v-navigation-drawer>
 
       <v-main style="height: 500px;">
+        <v-btn @click ="Debug">
+
+        </v-btn>
       </v-main>
     </v-layout>
   </v-card>
+
 </template>
 
 <script setup>
@@ -47,6 +51,7 @@ const drawerItems = reactive([
   {title: "app_bar2", route: ""}
 ]);
 
+
 // Functions
 const fetchData = async () => {
   try {
@@ -56,6 +61,9 @@ const fetchData = async () => {
     console.error('Error fetching data:', error);
   }
 };
+const Debug = () => {
+  console.log(this.$router.routes);
+}
 
 // Lifecycle hook
 onMounted(() => {

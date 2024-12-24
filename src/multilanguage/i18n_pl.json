@@ -1,5 +1,11 @@
 {
+  "Router": {
+    "home_route_name": "Strona Główna",
+    "experience_route_name": "Doświadczenie",
+    "about_route_name": "Informacje",
+    "hobbies_route_name": "Zainteresowania"
+  },
   "HomeView" : {
-    "toolbar_title": "osobista strona internetowa"
+    "toolbar_title": "Osobista strona internetowa"
   }
 }
