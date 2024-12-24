@@ -15,19 +15,19 @@ const routes = [
   },
   {
     path: '/Home',
-    component: () => import('@/pages/HomeView.vue')
+    component: () => import('@/pages/HomePage.vue')
   },
   {
     path: '/Repositories',
-    component: () => import('@/components/RepositoriesComponent.vue')
+    component: () => import('@/pages/RepositoriesPage.vue')
   },
   {
     path: '/Hobbies',
-    component: () => import('@/components/AboutComponent.vue')
+    component: () => import('@/pages/AboutPage.vue')
   },
   {
     path: '/Experience',
-    component: () => import('@/components/ExperienceComponent.vue')
+    component: () => import('@/pages/ExperiencePage.vue')
   },
 ]
 const router = createRouter({

@@ -1,9 +1,11 @@
 {
   "Router": {
-    "home_route_name": "Home",
-    "experience_route_name": "Experience",
-    "about_route_name": "About",
-    "hobbies_route_name": "Hobbies"
+    "Home": "Home",
+    "Experience": "Experience",
+    "About": "About",
+    "Repositories": "Repositories",
+    "Hobbies": "Hobbies"
+
   },
   "HomeView" : {
     "toolbar_title": "Personal Website"
