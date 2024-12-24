@@ -52,10 +52,9 @@ import axios from 'axios';
 import { useRouter } from "vue-router";
 import { useI18n } from 'vue-i18n'
 // web navigation,state, multilanguage support
-const { t } = useI18n();
-//TODO get t("Router") as object.
+const { tm } = useI18n();
 const router = useRouter();
-const translation = t('Router', { returnObjects: true });
+const translation = tm('Router');
 console.log(translation);
 // components elements
 const drawer = ref(false);
