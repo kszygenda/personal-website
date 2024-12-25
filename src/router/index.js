@@ -7,13 +7,28 @@
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router/auto'
-//import { routes } from 'vue-router/auto-routes'
-import HomeView from "@/pages/HomeView.vue";
 
 const routes = [
-  { path: '/', redirect: '/Home' },
-  {path: '/Home', component: HomeView},
-  // {path: '/Experience', component: ExperienceView}
+  {
+    path: '/',
+    redirect: '/Home'
+  },
+  {
+    path: '/Home',
+    component: () => import('@/pages/HomePage.vue')
+  },
+  {
+    path: '/Repositories',
+    component: () => import('@/pages/RepositoriesPage.vue')
+  },
+  {
+    path: '/Hobbies',
+    component: () => import('@/pages/AboutPage.vue')
+  },
+  {
+    path: '/Experience',
+    component: () => import('@/pages/ExperiencePage.vue')
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

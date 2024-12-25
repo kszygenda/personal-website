@@ -13,18 +13,21 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 import { createI18n } from "vue-i18n";
-import i18n_en from 'multilanguage/i18n_en.json'
-import i18n_pl from 'multilanguage/i18n_pl.json'
+import i18n_en from '@/multilanguage/i18n_en.json'
+import i18n_pl from '@/multilanguage/i18n_pl.json'
+import router from "@/router/index.js";
 
 const i18n = createI18n({
+  legacy: false, //https://vue-i18n.intlify.dev/guide/advanced/composition
   locale: "en",
   fallbackLocale: "en",
-  messages: {i18n_en,i18n_pl}
+  messages: {en : i18n_en, pl: i18n_pl}
 })
 const app = createApp(App)
 
 registerPlugins(app)
 
 app.use(i18n)
+app.use(router)
 app.mount('#app')
 
