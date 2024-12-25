@@ -11,7 +11,9 @@
           </v-app-bar-nav-icon>
           <v-toolbar-title>{{tm('HomeView.toolbar_title')}}</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-btn icon="mdi-dots-vertical" variant="text"></v-btn>
+          <v-btn icon="mdi-dots-vertical" variant="text">
+
+          </v-btn>
         </v-app-bar>
         <v-navigation-drawer
           v-model="drawer"
@@ -31,7 +33,7 @@
           </v-list>
         </v-navigation-drawer>
 
-        <v-main style="height: 100vh;">
+        <v-main style="height: 90vh;">
           <router-view/>
         </v-main>
       </v-layout>

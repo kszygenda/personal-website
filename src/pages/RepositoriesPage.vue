@@ -2,10 +2,22 @@
 import axios from "axios";
 import {ref, reactive, onMounted } from 'vue';
 
-const dataLoading = re
+const dataLoading = ref(true);
 async function getRepositories() {
+  axios.get("https://api.github.com/users/kszygenda/repos")
+    .then((response) => {
+      console.log(response.data);
+    })
+    .catch((err) => {
 
+    })
+    .finally(() => {
+      dataLoading.value = false;
+    })
 }
+onMounted(() => {
+  getRepositories();
+})
 </script>
 
 <template>
