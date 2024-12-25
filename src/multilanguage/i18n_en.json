@@ -8,5 +8,10 @@
   },
   "HomeView" : {
     "toolbar_title": "Personal Website"
+  },
+  "RepositoriesView" : {
+    "Repositories_fetching_error" : "There was an error while fetching repositories. Please try again",
+    "Repository_languages_error": "There was an error while fetching repository data. Please try again.",
+    "Repository_default_license_text": "No license"
   }
 }

@@ -8,5 +8,10 @@
   },
   "HomeView" : {
     "toolbar_title": "Osobista strona internetowa"
+  },
+  "RepositoriesView" : {
+    "Repositories_fetching_error" : "Podczas zbierania danych o repozytoriach wystąpił błąd. Spróbuj ponownie",
+    "Repository_languages_error": "Podczas zbierania danych o repozytorium wystąpił błąd. Spróbuj ponownie.",
+    "Repository_default_license_text" : "Brak licencji"
   }
 }
