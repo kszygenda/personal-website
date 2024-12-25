@@ -6,7 +6,8 @@ const dataLoading = ref(true);
 async function getRepositories() {
   axios.get("https://api.github.com/users/kszygenda/repos")
     .then((response) => {
-      console.log(response.data);
+      const data = response.data;
+
     })
     .catch((err) => {
 
