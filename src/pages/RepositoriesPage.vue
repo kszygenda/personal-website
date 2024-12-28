@@ -1,7 +1,13 @@
 <template>
   <!-- the idea is to create 2 columns with reach repo having individual card-->
   <v-container fluid>
-    <v-row>
+    <div v-if="dataLoading" class="text-center">
+      <v-progress-circular
+        color="primary"
+        indeterminate
+      ></v-progress-circular>
+    </div>
+    <v-row v-else>
       <template
         v-for="repo in repositories"
         :key="repo.name">
@@ -69,7 +75,7 @@ async function getRepositories() {
         url: obj.svn_url,
         created_at: dateFormating(obj.created_at),
         languages: languagesFormating(await getProjectLanguages(obj.languages_url)),
-        license: obj.license || t('RepositoriesView.Repository_default_license_text'),
+        license: obj.license?.name || t('RepositoriesView.Repository_default_license_text'),
         description: obj.description,
       }))
     );
