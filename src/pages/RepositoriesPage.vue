@@ -53,9 +53,7 @@ import {GITHUB_TOKEN} from "../../.env/dev.js";
 const { t } = useI18n();
 const dataLoading = ref(true);
 const repositories = reactive([]);
-
 const BASE_URL = 'https://api.github.com';
-//functions
 const githubAPI = axios.create({
   baseURL: BASE_URL,
   headers: {
@@ -64,7 +62,7 @@ const githubAPI = axios.create({
   },
 });
 
-// Fetch repositories
+//functions
 async function getRepositories() {
   let data;
   try {
@@ -87,8 +85,6 @@ async function getRepositories() {
   }
   return data;
 }
-
-// Fetch project languages
 async function getProjectLanguages(url) {
   try {
     const response = await githubAPI.get(url);
@@ -108,13 +104,11 @@ function openLink(url) {
   window.open(url,'_blank');
 }
 
-
 onMounted(() => {
   getRepositories().then((data) => {
     for(let i = 0;i<data.length;++i){
       repositories.push(data[i]);
     }
-    console.log(repositories);
   });
 })
 </script>
