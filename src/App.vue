@@ -11,9 +11,15 @@
           </v-app-bar-nav-icon>
           <v-toolbar-title>{{tm('HomeView.toolbar_title')}}</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-btn icon="mdi-dots-vertical" variant="text">
-
+          <v-btn
+            :icon="theme.global.current.value.dark ? 'mdi-weather-sunny' : 'mdi-weather-night'"
+            @click="toggleTheme">
           </v-btn>
+          <v-btn
+            icon="mdi-translate"
+            @click="openDialog">
+          </v-btn>
+          <languageChangeDialogue ref="langDialog"/>
         </v-app-bar>
         <v-navigation-drawer
           v-model="drawer"
@@ -32,7 +38,6 @@
             </v-list-item>
           </v-list>
         </v-navigation-drawer>
-
         <v-main style="height: 100vh;">
           <router-view/>
         </v-main>
@@ -42,13 +47,21 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from 'vue';
+import { ref, reactive, onMounted, computed } from 'vue';
 import { useRouter } from "vue-router";
 import { useI18n } from 'vue-i18n';
-// web navigation,state, multilanguage support
+import { useTheme } from 'vuetify'
+import languageChangeDialogue from "@/components/LanguageChangeDialogue.vue";
+
+// web navigation,state, multilanguage support, theme changing
 const { tm } = useI18n();
 const router = useRouter();
+const theme = useTheme()
 // components elements
+const langDialog = ref(false);
+const openDialog = () => {
+  langDialog.value.isActive = true;
+};
 const drawer = ref(false);
 const iconMapping = {
   "Home": "mdi-home",
@@ -57,16 +70,23 @@ const iconMapping = {
   "Hobbies": "mdi-gamepad-variant",
   "Repositories": "mdi-github"
 }
-const drawerItems = reactive(Object.entries(tm('Router')).map((arr) => (
-  { title: arr[1], route: arr[0], icon: iconMapping[arr[0]] }
-)));
+const drawerItems = computed( () => {
+  return reactive(Object.entries(tm('Router')).map((arr) => (
+    { title: arr[1], route: arr[0], icon: iconMapping[arr[0]] }
+  )))
+});
 // Functions
 function itemClicked(item) {
   router.push('/'+item.route);
 }
-
+function toggleTheme () {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+}
 // Lifecycle hook
 onMounted(() => {
   console.log('Component mounted');
 });
 </script>
+
+
+

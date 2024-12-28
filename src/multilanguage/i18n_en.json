@@ -13,5 +13,14 @@
     "Repositories_fetching_error" : "There was an error while fetching repositories. Please try again",
     "Repository_languages_error": "There was an error while fetching repository data. Please try again.",
     "Repository_default_license_text": "No license"
+  },
+  "LanguangeChangeDialogue" : {
+    "title": "Select language",
+    "close_dialog": "Close",
+    "languages": {
+      "pl": "Polish",
+      "en": "English"
+    }
+
   }
 }
