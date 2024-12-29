@@ -1,5 +1,4 @@
 <template>
-  <!-- the idea is to create 2 columns with reach repo having individual card-->
   <v-container fluid>
     <div v-if="dataLoading" class="text-center">
       <v-progress-circular
@@ -116,8 +115,4 @@ onMounted(() => {
 
 
 <style scoped>
-.red-outline {
-  border: 2px solid red;
-  border-radius: 4px; /* Opcjonalne: zaokrąglenie rogów */
-}
 </style>

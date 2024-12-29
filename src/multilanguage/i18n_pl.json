@@ -21,5 +21,27 @@
       "pl": "Polski",
       "en": "Angielski"
     }
+  },
+  "AboutView" : {
+    "title": "Informacje o projekcie",
+    "info_text": "Ta strona jest na ten moment moim webowym CV. W przyszłości, jeśli będzie potrzeba, będę rozwijać te stronę :).",
+    "technologies": "Technologie i funkcjonalności",
+    "technologies_text": [
+      {
+        "technology": "vue 3.0 composition API",
+        "description": "Composition API w Vue 3.0 to nowy sposób definiowania komponentów w aplikacjach Vue, który wprowadza bardziej elastyczne i modularne podejście w porównaniu do tradycyjnej opcji API. Pozwala na łatwiejsze zarządzanie stanem, logiką i ponownym użyciem kodu w różnych komponentach.",
+        "icon": "mdi-vuejs"
+      },
+      {
+        "technology": "Vuetify",
+        "description": "Vuetify to popularna biblioteka komponentów UI oparta na Vue.js, która oferuje szeroki zestaw gotowych komponentów zgodnych z zasadami Material Design. Umożliwia szybkie tworzenie nowoczesnych i responsywnych interfejsów użytkownika.",
+        "icon": "mdi-vuetify"
+      },
+      {
+        "technology": "Vue router",
+        "description": "Vue Router to oficjalna biblioteka routingu dla Vue.js, która pozwala na tworzenie aplikacji wielostronicowych poprzez zarządzanie trasami i komponentami w aplikacji. Obsługuje dynamiczne ładowanie stron, parametry URL i wiele więcej.",
+        "icon": "mdi-vuejs"
+      }
+    ]
   }
 }

@@ -23,6 +23,10 @@ const routes = [
   },
   {
     path: '/Hobbies',
+    component: () => import('@/pages/HobbiesPage.vue')
+  },
+  {
+    path: '/About',
     component: () => import('@/pages/AboutPage.vue')
   },
   {
