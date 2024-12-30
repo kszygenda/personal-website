@@ -7,7 +7,19 @@
     "About": "About"
   },
   "HomeView" : {
-    "toolbar_title": "Personal Website"
+    "toolbar_title": "Personal Website",
+    "welcome": "Welcome to my website!",
+    "welcome_text": "On this site you will find information about me",
+    "theme_tooltip": "Click to change theme mode",
+    "language_tooltip": "Click to change language",
+    "view_card_button_text": "Go to page",
+    "Views_card_descriptions": {
+      "Home": "You are currently here :)",
+      "Experience": "My education and professional experience",
+      "Repositories": "My public github repositories/projects with information about each",
+      "Hobbies": "A bit about me and what I do in free time",
+      "About": "Information about this project and used technologies"
+    }
   },
   "RepositoriesView" : {
     "Repositories_fetching_error" : "There was an error while fetching repositories. Please try again",

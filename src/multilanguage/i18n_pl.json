@@ -7,7 +7,19 @@
     "About": "Informacje"
   },
   "HomeView" : {
-    "toolbar_title": "Osobista strona internetowa"
+    "toolbar_title": "Osobista strona internetowa",
+    "welcome": "Witam na mojej stronie!",
+    "welcome_text": "Na tej stronie znajdziesz informacje o mnie",
+    "theme_tooltip": "Kliknij aby zmienić kolor tła",
+    "language_tooltip": "Kliknij aby zmienić język",
+    "view_card_button_text": "Przejdź do strony",
+    "Views_card_descriptions": {
+      "Home": "Tutaj się znajdujesz :)",
+      "Experience": "Moje wykształcenie oraz doświadczenie zawodowe",
+      "Repositories": "Moje publiczne repozytoria z Github",
+      "Hobbies": "Trochę o mnie i o tym co robię w wolnym czasie",
+      "About": "Informacje o projekcie i wykorzystywanych technologiach"
+    }
   },
   "RepositoriesView" : {
     "Repositories_fetching_error" : "Podczas zbierania danych o repozytoriach wystąpił błąd. Spróbuj ponownie",
@@ -28,7 +40,7 @@
     "technologies": "Technologie i funkcjonalności",
     "technologies_text": [
       {
-        "technology": "vue 3.0 composition API",
+        "technology": "Vue 3.0 composition API",
         "description": "Composition API w Vue 3.0 to nowy sposób definiowania komponentów w aplikacjach Vue, który wprowadza bardziej elastyczne i modularne podejście w porównaniu do tradycyjnej opcji API. Pozwala na łatwiejsze zarządzanie stanem, logiką i ponownym użyciem kodu w różnych komponentach.",
         "icon": "mdi-vuejs"
       },

@@ -11,14 +11,24 @@
           </v-app-bar-nav-icon>
           <v-toolbar-title>{{tm('HomeView.toolbar_title')}}</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-btn
-            :icon="theme.global.current.value.dark ? 'mdi-weather-sunny' : 'mdi-weather-night'"
-            @click="toggleTheme">
-          </v-btn>
-          <v-btn
-            icon="mdi-translate"
-            @click="openDialog">
-          </v-btn>
+          <v-tooltip location="bottom">{{tm('HomeView.theme_tooltip')}}
+            <template v-slot:activator="{props}">
+              <v-btn
+                :icon="theme.global.current.value.dark ? 'mdi-weather-sunny' : 'mdi-weather-night'"
+                @click="toggleTheme"
+                v-bind="props">
+              </v-btn>
+            </template>
+          </v-tooltip>
+          <v-tooltip location="bottom">{{tm('HomeView.language_tooltip')}}
+            <template v-slot:activator="{props}">
+              <v-btn
+                icon="mdi-translate"
+                @click="openDialog"
+                v-bind="props">
+              </v-btn>
+            </template>
+          </v-tooltip>
           <languageChangeDialogue ref="langDialog"/>
         </v-app-bar>
         <v-navigation-drawer
@@ -47,16 +57,18 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, computed } from 'vue';
+import { ref, reactive, onMounted, computed, provide } from 'vue';
 import { useRouter } from "vue-router";
 import { useI18n } from 'vue-i18n';
 import { useTheme } from 'vuetify'
 import languageChangeDialogue from "@/components/LanguageChangeDialogue.vue";
+import {useMainStore} from "@/stores/mainStore.js";
 
 // web navigation,state, multilanguage support, theme changing
 const { tm } = useI18n();
 const router = useRouter();
-const theme = useTheme()
+const theme = useTheme();
+const mainStore = useMainStore();
 // components elements
 const langDialog = ref(false);
 const openDialog = () => {
@@ -75,6 +87,8 @@ const drawerItems = computed( () => {
     { title: arr[1], route: arr[0], icon: iconMapping[arr[0]] }
   )))
 });
+mainStore.replaceRouterList(drawerItems.value);
+
 // Functions
 function itemClicked(item) {
   router.push('/'+item.route);

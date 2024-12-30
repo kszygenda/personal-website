@@ -1,47 +1,49 @@
 <template>
-  <v-container fluid>
-    <div v-if="dataLoading" class="text-center">
-      <v-progress-circular
-        color="primary"
-        indeterminate
-      ></v-progress-circular>
-    </div>
-    <v-row v-else>
-      <template
-        v-for="repo in repositories"
-        :key="repo.name">
-        <!-- https://vuetifyjs.com/en/components/cards/#combined -->
-        <v-col
-          md="4"
-          sm="6"
-          xs="12">
-          <v-card
-            class="mx-auto"
-            prepend-icon="mdi-github"
-            width="400">
-            <template v-slot:title>
-              <span class="font-weight-black">{{repo.name}}</span>
-            </template>
-            <v-card-subtitle>
-              {{repo.created_at}} <v-spacer></v-spacer> {{repo.license}}
-            </v-card-subtitle>
-            <v-card-text class="bg-surface-light pt-4">
-              {{repo.description}}
-            </v-card-text>
-            <v-card-actions>
-              <h5>Languages: {{repo.languages}}</h5>
-              <v-spacer></v-spacer>
-              <v-btn
-                text="Link"
-                prepend-icon="mdi-link-variant"
-                @click="openLink(repo.url)">
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </template>
-    </v-row>
-  </v-container>
+  <v-col>
+    <v-container fluid>
+      <div v-if="dataLoading" class="text-center">
+        <v-progress-circular
+          color="primary"
+          indeterminate
+        ></v-progress-circular>
+      </div>
+      <v-row v-else>
+        <template
+          v-for="repo in repositories"
+          :key="repo.name">
+          <!-- https://vuetifyjs.com/en/components/cards/#combined -->
+          <v-col
+            md="4"
+            sm="6"
+            xs="12">
+            <v-card
+              variant="outlined"
+              class="mx-auto"
+              prepend-icon="mdi-github">
+              <template v-slot:title>
+                <span class="font-weight-black">{{repo.name}}</span>
+              </template>
+              <v-card-subtitle>
+                {{repo.created_at}} <v-spacer></v-spacer> {{repo.license}}
+              </v-card-subtitle>
+              <v-card-text class="bg-surface-light pt-4">
+                {{repo.description}}
+              </v-card-text>
+              <v-card-actions>
+                <h5>Languages: {{repo.languages}}</h5>
+                <v-spacer></v-spacer>
+                <v-btn
+                  text="Link"
+                  prepend-icon="mdi-link-variant"
+                  @click="openLink(repo.url)">
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </template>
+      </v-row>
+    </v-container>
+  </v-col>
 </template>
 <script setup>
 import axios from "axios";
