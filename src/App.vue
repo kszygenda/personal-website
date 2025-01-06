@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, computed, provide } from 'vue';
+import { ref, reactive, onMounted, computed} from 'vue';
 import { useRouter } from "vue-router";
 import { useI18n } from 'vue-i18n';
 import { useTheme } from 'vuetify'

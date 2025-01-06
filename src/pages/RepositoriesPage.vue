@@ -49,7 +49,6 @@
 import axios from "axios";
 import {ref, reactive, onMounted } from 'vue';
 import { useI18n } from "vue-i18n";
-import {GITHUB_TOKEN} from "../../.env/dev.js";
 //components
 const { t } = useI18n();
 const dataLoading = ref(true);
@@ -58,7 +57,7 @@ const BASE_URL = 'https://api.github.com';
 const githubAPI = axios.create({
   baseURL: BASE_URL,
   headers: {
-    Authorization: `Bearer ${GITHUB_TOKEN}`,
+    Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
     Accept: 'application/vnd.github+json',
   },
 });
