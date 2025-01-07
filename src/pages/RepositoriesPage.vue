@@ -53,20 +53,12 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 const dataLoading = ref(true);
 const repositories = reactive([]);
-const BASE_URL = 'https://api.github.com';
-const githubAPI = axios.create({
-  baseURL: BASE_URL,
-  headers: {
-    Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
-    Accept: 'application/vnd.github+json',
-  },
-});
 
 //functions
 async function getRepositories() {
   let data;
   try {
-    const response = await githubAPI.get('/users/kszygenda/repos');
+    const response = await axios.get('https://api.github.com/users/kszygenda/repos');
     data = await Promise.all(
       response.data.map(async (obj) => ({
         name: obj.name,
@@ -87,7 +79,7 @@ async function getRepositories() {
 }
 async function getProjectLanguages(url) {
   try {
-    const response = await githubAPI.get(url);
+    const response = await axios.get(url);
     return response.data;
   } catch (err) {
     alert(t('RepositoriesView.Repository_languages_error') + err);
