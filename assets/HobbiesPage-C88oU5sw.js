@@ -1,0 +1,1 @@
+import{_ as n,b as s,d as t,F as o,o as r}from"./index-BWeF0NUF.js";const a={};function l(i,e){return r(),s(o,null,[e[0]||(e[0]=t("h1",null,"Hobbies View",-1)),e[1]||(e[1]=t("h2",null,"testing 123 testing..",-1))],64)}const u=n(a,[["render",l]]);export{u as default};
