@@ -13,6 +13,7 @@
     "theme_tooltip": "Click to change theme mode",
     "language_tooltip": "Click to change language",
     "view_card_button_text": "Go to page",
+    "options_text": "On the upper application bar, you can access other pages, change website theme and language",
     "Views_card_descriptions": {
       "Home": "You are currently here :)",
       "Experience": "My education and professional experience",

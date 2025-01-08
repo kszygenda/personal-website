@@ -2,6 +2,7 @@
   <div class="text-center">
     <h1>{{ tm('HomeView.welcome') }}</h1>
     <h4>{{tm('HomeView.welcome_text')}}</h4>
+    <p>{{tm("HomeView.options_text")}}</p>
   </div>
   <v-container fluid>
     <v-row justify="center">
@@ -74,10 +75,18 @@ h4
   font-weight: 300
   margin-top: 30px
   text-align: center
+  font-family: Georgia
 
 div
   font-size: 1rem
   line-height: 1.5
   margin: 10px 20px
+
+p
+  font-size: 1.2rem
+  font-weight: 200
+  margin-top: 15px
+  text-align: center
+  font-family: Georgia
 
 </style>
