@@ -3,8 +3,7 @@
 </script>
 
 <template>
-  <h1>Hobbies View</h1>
-  <h2>testing 123 testing..</h2>
+  <h1>This view is currently in development</h1>
 </template>
 
 <style scoped lang="sass">
