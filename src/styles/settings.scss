@@ -8,3 +8,7 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
+//https://stackoverflow.com/questions/77665793/scrollbar-shown-by-default-using-vuetify-3
+html {
+  overflow-y: auto !important;
+}
