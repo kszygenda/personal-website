@@ -7,7 +7,7 @@
     "About": "Informacje"
   },
   "HomeView" : {
-    "toolbar_title": "Osobista strona internetowa",
+    "toolbar_title": "Rafał Szygenda - Osobista strona internetowa",
     "welcome": "Witam na mojej stronie!",
     "welcome_text": "Na tej stronie znajdziesz informacje o mnie",
     "theme_tooltip": "Kliknij aby zmienić kolor tła",
@@ -34,6 +34,9 @@
       "pl": "Polski",
       "en": "Angielski"
     }
+  },
+  "Footer": {
+    "text": "Znajdź mnie tutaj"
   },
   "AboutView" : {
     "title": "Informacje o projekcie",

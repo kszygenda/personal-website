@@ -1,4 +1,6 @@
 <script setup>
+import { ref, reactive, onMounted, computed} from 'vue';
+import { useI18n } from 'vue-i18n';
 
 </script>
 

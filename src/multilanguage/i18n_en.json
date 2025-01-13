@@ -7,7 +7,7 @@
     "About": "About"
   },
   "HomeView" : {
-    "toolbar_title": "Personal Website",
+    "toolbar_title": "Rafał Szygenda - Personal Website",
     "welcome": "Welcome to my website!",
     "welcome_text": "On this site you will find information about me",
     "theme_tooltip": "Click to change theme mode",
@@ -35,6 +35,9 @@
       "en": "English"
     }
   },
+  "Footer": {
+    "text": "Find and contact me here!"
+  },
   "AboutView" : {
     "title": "Project information",
     "info_text": "For the moment, this website is my web CV. If the need be, I'll be expanding it :)",
@@ -56,5 +59,64 @@
         "icon": "mdi-vuejs"
       }
     ]
+  },
+  "ExperienceView" : {
+    "Professional experience": {
+      "title": "Professional experience",
+      "Volkswagen Poznan": {
+        "Internship": {
+          "timestamp": "2024-08/2024-09",
+          "bullet_points": [
+            "Designed and implemented web application using Vue.js to visualize industrial robot animations. The\napplication featured a playback interface, allowing users to view data for a specific time period and\nobserve the corresponding robot motion animations. I implemented seamless integration of time-based\ndata visualization with precise robot movement simulation, providing an intuitive and interactive\nexperience for monitoring and analyzing robotic operations.",
+            "Designed and enhanced existing web solutions by creating new and modifying existing Django REST API\nendpoints connected to a MySQL database. These endpoints facilitated the management and retrieval of a\ndetailed record of production exchanges, ensuring efficient data handling and integration with the existing\nsystem.",
+            "Collaborated within a team of 3 engineers to design software solutions, utilizing Git for version control\nand project coordination."
+          ]
+        },
+        "Project Internship": {
+          "timestamp": "2024-11/Now",
+          "bullet_points": [
+            "Designed and developed a web application with Vue.js for visualizing 3D models and animations, adhering\nto UX/UI guidelines to ensure a user-friendly and engaging interface.",
+            "Collaborated within a team of 5 engineers using Git and Jira for version control, task management, and\nproject coordination.",
+            "Enhanced and optimized methods in Django REST API, improving backend performance and system\nreliability.",
+            "Analyzed robot data to evaluate the system’s information transmission speed and ensure the proper\nfunctionality of the robots, contributing to system efficiency and robustness."
+          ]
+        }
+      }
+    },
+    "University experience" : {
+      "title": "University experience",
+      "PUT Poznan": {
+        "timestamp": "2021-10/Now",
+        "bullet_points": [
+          "[Fundamentals of Computer Science]: Fundamentals of programming and databases, C++, Winforms and MySQL",
+          "[Structured and object-oriented programming]: Object oriented programming, algorithms, data structures using C++",
+          "[Numerical Methods and Simulation]: Numerical methods and simulations with C++ and Matlab",
+          "[Modeling and control of Robots]: Fundamentals of ROS libraries and robotics simulation using Linux, Python",
+          "[Introduction to computer vision]: Image processing, industrial computer vision systems and basics of deep-learning",
+          "[Microprocessor systems]: Embedded applications using C",
+          "[Mobile Applications]: Creating accessible application using Android Studio, Kotlin",
+          "[Real Time Systems]: Multi-thread embedded applications using FreeRTOS, arduino. Multithreading in C++"
+        ]
+      },
+      "Simuthon 2023": {
+        "bullet_points": [
+
+        ]
+      }
+    },
+    "Self taught" : {
+      "title": "Self taught experience",
+      "Neetcode": {
+        "bullet_points": [
+          "Algorithms and data structures: ",
+          "Other courses: Haven't had the time to finish them yet."
+        ]
+      },
+      "freeCodeCamp": {
+        "bullet_points": [
+          "Responsive web design:"
+        ]
+      }
+    }
   }
 }

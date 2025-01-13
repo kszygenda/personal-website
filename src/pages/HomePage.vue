@@ -1,37 +1,39 @@
 <template>
-  <div class="text-center">
-    <h1>{{ tm('HomeView.welcome') }}</h1>
-    <h4>{{tm('HomeView.welcome_text')}}</h4>
-    <p>{{tm("HomeView.options_text")}}</p>
+  <div class="HomePage">
+    <div class="text-center">
+      <h1>{{ tm('HomeView.welcome') }}</h1>
+      <h4>{{tm('HomeView.welcome_text')}}</h4>
+      <p>{{tm("HomeView.options_text")}}</p>
+    </div>
+    <v-container fluid>
+      <v-row justify="center">
+        <template
+          v-for="(item,index) in router_items"
+          :key="index">
+          <v-col
+            cols="12"
+            sm="5">
+            <v-card
+              :prepend-icon="item.icon"
+              color="teal-lighten-1">
+              <v-card-title>{{item.title}}</v-card-title>
+              <v-card-text>
+                {{item.description}}
+              </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  :text="tm('HomeView.view_card_button_text')"
+                  @click="goToPage(item.route)"
+                  color="teal-darken-2"
+                  variant="elevated">
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </template>
+      </v-row>
+    </v-container>
   </div>
-  <v-container fluid>
-    <v-row justify="center">
-      <template
-        v-for="(item,index) in router_items"
-        :key="index">
-        <v-col
-          cols="12"
-          sm="5">
-          <v-card
-            :prepend-icon="item.icon"
-            color="indigo-darken-3">
-            <v-card-title>{{item.title}}</v-card-title>
-            <v-card-text>
-              {{item.description}}
-            </v-card-text>
-            <v-card-actions>
-              <v-btn
-                :text="tm('HomeView.view_card_button_text')"
-                @click="goToPage(item.route)"
-                color="indigo"
-                variant="elevated">
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </template>
-    </v-row>
-  </v-container>
 </template>
 
 <script setup>
@@ -42,7 +44,6 @@ import {useRouter} from "vue-router";
 const { tm } = useI18n();
 const mainStore = useMainStore();
 const router_items = computed(() => extendItems(mainStore.getRouterList));
-//FUTUREWORKS Move router to store
 const router = useRouter();
 
 function extendItems(router_obj) {
@@ -89,4 +90,8 @@ p
   text-align: center
   font-family: Georgia
 
+//i have no clue why 90 works instead of a 100
+.HomePage
+  overflow-y: scroll !important
+  height: 90vh
 </style>
