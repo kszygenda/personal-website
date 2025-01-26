@@ -63,6 +63,7 @@
   "ExperienceView" : {
     "Professional experience": {
       "title": "Professional experience",
+      "icon": "mdi-briefcase-outline",
       "Volkswagen Poznan": {
         "Internship": {
           "timestamp": "2024-08/2024-09",
@@ -85,6 +86,7 @@
     },
     "University experience" : {
       "title": "University experience",
+      "icon": "mdi-school-outline",
       "PUT Poznan": {
         "timestamp": "2021-10/Now",
         "bullet_points": [
@@ -100,21 +102,8 @@
       },
       "Simuthon 2023": {
         "bullet_points": [
-
-        ]
-      }
-    },
-    "Self taught" : {
-      "title": "Self taught experience",
-      "Neetcode": {
-        "bullet_points": [
-          "Algorithms and data structures: ",
-          "Other courses: Haven't had the time to finish them yet."
-        ]
-      },
-      "freeCodeCamp": {
-        "bullet_points": [
-          "Responsive web design:"
+          "Solved path optimization task, using A* algorithm with custom cost function",
+          "Helped in code refactorization in other tasks"
         ]
       }
     }

@@ -71,7 +71,6 @@ import { useTheme } from 'vuetify'
 import languageChangeDialogue from "@/components/LanguageChangeDialogue.vue";
 import {useMainStore} from "@/stores/mainStore.js";
 import footerComponent from "@/components/Footer.vue";
-
 // web navigation,state, multilanguage support, theme changing
 const { tm } = useI18n();
 const router = useRouter();

@@ -25,9 +25,8 @@ import {useI18n} from "vue-i18n";
 import {computed} from "vue";
 export default {
   setup(){
-
+    const {t} = useI18n()
     const footer_text = computed(() => {
-      const {t} = useI18n()
       return t('Footer.text');
     });
     const footer_buttons = [

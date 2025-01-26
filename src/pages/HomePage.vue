@@ -90,8 +90,4 @@ p
   text-align: center
   font-family: Georgia
 
-//i have no clue why 90 works instead of a 100
-.HomePage
-  overflow-y: scroll !important
-  height: 90vh
 </style>
