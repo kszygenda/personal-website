@@ -64,24 +64,22 @@
     "Professional experience": {
       "title": "Professional experience",
       "icon": "mdi-briefcase-outline",
-      "Volkswagen Poznan": {
-        "Internship": {
-          "timestamp": "2024-08/2024-09",
-          "bullet_points": [
-            "Designed and implemented web application using Vue.js to visualize industrial robot animations. The\napplication featured a playback interface, allowing users to view data for a specific time period and\nobserve the corresponding robot motion animations. I implemented seamless integration of time-based\ndata visualization with precise robot movement simulation, providing an intuitive and interactive\nexperience for monitoring and analyzing robotic operations.",
-            "Designed and enhanced existing web solutions by creating new and modifying existing Django REST API\nendpoints connected to a MySQL database. These endpoints facilitated the management and retrieval of a\ndetailed record of production exchanges, ensuring efficient data handling and integration with the existing\nsystem.",
-            "Collaborated within a team of 3 engineers to design software solutions, utilizing Git for version control\nand project coordination."
-          ]
-        },
-        "Project Internship": {
-          "timestamp": "2024-11/Now",
-          "bullet_points": [
-            "Designed and developed a web application with Vue.js for visualizing 3D models and animations, adhering\nto UX/UI guidelines to ensure a user-friendly and engaging interface.",
-            "Collaborated within a team of 5 engineers using Git and Jira for version control, task management, and\nproject coordination.",
-            "Enhanced and optimized methods in Django REST API, improving backend performance and system\nreliability.",
-            "Analyzed robot data to evaluate the system’s information transmission speed and ensure the proper\nfunctionality of the robots, contributing to system efficiency and robustness."
-          ]
-        }
+      "Volkswagen Poznan - Internship": {
+        "timestamp": "2024-08/2024-09",
+        "bullet_points": [
+          "Designed and implemented web application using Vue.js to visualize industrial robot animations. The\napplication featured a playback interface, allowing users to view data for a specific time period and\nobserve the corresponding robot motion animations. I implemented seamless integration of time-based\ndata visualization with precise robot movement simulation, providing an intuitive and interactive\nexperience for monitoring and analyzing robotic operations.",
+          "Designed and enhanced existing web solutions by creating new and modifying existing Django REST API\nendpoints connected to a MySQL database. These endpoints facilitated the management and retrieval of a\ndetailed record of production exchanges, ensuring efficient data handling and integration with the existing\nsystem.",
+          "Collaborated within a team of 3 engineers to design software solutions, utilizing Git for version control\nand project coordination."
+        ]
+      },
+      "Volkswagen Poznan - Project Internship": {
+        "timestamp": "2024-11/Now",
+        "bullet_points": [
+          "Designed and developed a web application with Vue.js for visualizing 3D models and animations, adhering\nto UX/UI guidelines to ensure a user-friendly and engaging interface.",
+          "Collaborated within a team of 5 engineers using Git and Jira for version control, task management, and\nproject coordination.",
+          "Enhanced and optimized methods in Django REST API, improving backend performance and system\nreliability.",
+          "Analyzed robot data to evaluate the system’s information transmission speed and ensure the proper\nfunctionality of the robots, contributing to system efficiency and robustness."
+        ]
       }
     },
     "University experience" : {

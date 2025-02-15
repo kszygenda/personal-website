@@ -9,6 +9,7 @@ const cardTextObject = (obj) => {
   const obj_cp = { ...obj };
   delete obj_cp['title'];
   delete obj_cp['icon'];
+  console.log(obj,obj_cp);
   return obj_cp;
 };
 </script>
