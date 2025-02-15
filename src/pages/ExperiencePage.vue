@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n';
 const { tm } = useI18n();
 const ExperienceObject = computed(() => tm('ExperienceView'));
 
-// return object without icon and title
+// copy of i18n json object for front v-for without title and icon
 const cardTextObject = (obj) => {
   const obj_cp = { ...obj };
   delete obj_cp['title'];
