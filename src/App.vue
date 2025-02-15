@@ -3,7 +3,7 @@
     <v-card>
       <v-layout>
         <v-app-bar
-          color="primary"
+          color="teal-darken-1"
           prominent>
           <v-app-bar-nav-icon
             variant="text"
@@ -50,6 +50,13 @@
         </v-navigation-drawer>
         <v-main style="height: 100vh;">
           <router-view/>
+          <v-footer
+            app
+            class="footer"
+            style="flex-shrink: 0;">
+            <footerComponent/>
+          </v-footer>
+
         </v-main>
       </v-layout>
     </v-card>
@@ -63,7 +70,7 @@ import { useI18n } from 'vue-i18n';
 import { useTheme } from 'vuetify'
 import languageChangeDialogue from "@/components/LanguageChangeDialogue.vue";
 import {useMainStore} from "@/stores/mainStore.js";
-
+import footerComponent from "@/components/Footer.vue";
 // web navigation,state, multilanguage support, theme changing
 const { tm } = useI18n();
 const router = useRouter();
@@ -101,6 +108,13 @@ onMounted(() => {
   console.log('Component mounted');
 });
 </script>
-
+<style scoped>
+.footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+</style>
 
 
