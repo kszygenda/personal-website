@@ -1,1 +1,0 @@
-import{_ as e,b as c,o as n}from"./index-OXhaDU9f.js";const r={};function t(o,s){return n(),c("h1",null,"This view is currently in development")}const _=e(r,[["render",t],["__scopeId","data-v-16d02390"]]);export{_ as default};
