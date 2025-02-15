@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, onMounted, computed} from 'vue';
+import { computed} from 'vue';
 import { useI18n } from 'vue-i18n';
 const { tm } = useI18n();
 const ExperienceObject = computed(() => tm('ExperienceView'));
@@ -9,7 +9,6 @@ const cardTextObject = (obj) => {
   const obj_cp = { ...obj };
   delete obj_cp['title'];
   delete obj_cp['icon'];
-  console.log(obj,obj_cp);
   return obj_cp;
 };
 </script>
@@ -24,13 +23,22 @@ const cardTextObject = (obj) => {
           class="mx-auto"
           :prepend-icon="value.icon"
           :title="value.title">
+          <!-- TODO design and implement a card "insides"-->
+          <template v-for="(value2,key2) in cardTextObject(value)">
+            <v-list>
+              <v-list-subheader>
+                <h4>{{key2}}</h4><h4>{{value2.timestamp}}</h4>
+              </v-list-subheader>
+              <v-list-item
+                v-for="listItem in value2.bullet_points">
+                <template v-slot:prepend>
+                  <v-icon icon="mdi-circle-small"></v-icon>
+                </template>
+                {{listItem}}
+              </v-list-item>
+            </v-list>
+          </template>
         </v-card>
-        <!-- TODO design and implement a card "insides"-->
-        <template v-for="(value2,key2) in cardTextObject(value)">
-          <div>
-            {{ key2}}
-          </div>
-        </template>
       </v-col>
     </v-row>
   </v-container>
