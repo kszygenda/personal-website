@@ -1,38 +1,40 @@
 <template>
   <div class="HomePage">
-    <div class="text-center">
-      <h1>{{ tm('HomeView.welcome') }}</h1>
-      <h4>{{tm('HomeView.welcome_text')}}</h4>
-      <p>{{tm("HomeView.options_text")}}</p>
+    <div class="scrollable-content">
+      <div class="text-center">
+        <h1>{{ tm('HomeView.welcome') }}</h1>
+        <h4>{{tm('HomeView.welcome_text')}}</h4>
+        <p>{{tm("HomeView.options_text")}}</p>
+      </div>
+      <v-container fluid>
+        <v-row justify="center">
+          <template
+            v-for="(item,index) in router_items"
+            :key="index">
+            <v-col
+              cols="12"
+              sm="5">
+              <v-card
+                :prepend-icon="item.icon"
+                color="teal-lighten-1">
+                <v-card-title>{{item.title}}</v-card-title>
+                <v-card-text>
+                  {{item.description}}
+                </v-card-text>
+                <v-card-actions>
+                  <v-btn
+                    :text="tm('HomeView.view_card_button_text')"
+                    @click="goToPage(item.route)"
+                    color="teal-darken-2"
+                    variant="elevated">
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-col>
+          </template>
+        </v-row>
+      </v-container>
     </div>
-    <v-container fluid>
-      <v-row justify="center">
-        <template
-          v-for="(item,index) in router_items"
-          :key="index">
-          <v-col
-            cols="12"
-            sm="5">
-            <v-card
-              :prepend-icon="item.icon"
-              color="teal-lighten-1">
-              <v-card-title>{{item.title}}</v-card-title>
-              <v-card-text>
-                {{item.description}}
-              </v-card-text>
-              <v-card-actions>
-                <v-btn
-                  :text="tm('HomeView.view_card_button_text')"
-                  @click="goToPage(item.route)"
-                  color="teal-darken-2"
-                  variant="elevated">
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-        </template>
-      </v-row>
-    </v-container>
   </div>
 </template>
 
@@ -61,6 +63,13 @@ function goToPage(route) {
 }
 </script>
 <style scoped lang="sass">
+.HomePage
+  height: 95vh
+  display: flex
+  flex-direction: column
+  overflow-y: auto
+  flex-grow: 1
+
 .text-center
   text-align: center
   margin-top: 20px
